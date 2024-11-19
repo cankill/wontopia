@@ -30,14 +30,14 @@ jobs:
     steps:
       - uses: pnpm/action-setup@v4
         with:
-            version: 9      
+            version: 9.12.2
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: 'npm'
+          node-version: 20
+          cache: 'pnpm'
           cache-dependency-path: './'
       - name: Install dependencies
         run: pnpm install
@@ -49,6 +49,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist repository
+          name: 'github-pages'
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
