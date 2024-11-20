@@ -1,10 +1,15 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
+import './index.css'
+import { TonConnectUIProvider } from '@tonconnect/ui-react'
+import WebApp from '@twa-dev/sdk'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+WebApp.ready();
+
+const manifestUrl = "https://simplemoves.github.io/wonton-nft/tonconnect-manifest.json";
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <TonConnectUIProvider manifestUrl={manifestUrl}>
     <App />
-  </StrictMode>,
+  </TonConnectUIProvider>,
 )

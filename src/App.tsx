@@ -1,34 +1,76 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Dropdown, Flex, MenuProps, Space } from "antd";
+import { DownOutlined, ReloadOutlined } from "@ant-design/icons";
+import { globalUniversesHolder } from './store/GlobalUniversesHolder';
+import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
+import { tonAddress } from './lib/TonUtils';
+import { useNftsStore } from './store/NftsStore';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+window.Buffer = window.Buffer || require("buffer").Buffer;
+
+export const testOnly = import.meta.env.VITE_TEST_ONLY === 'true' || true;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const nftStore = useNftsStore();
+  const wallet = useTonWallet();
+  const walletAddress = useMemo(() => tonAddress(wallet?.account.address), [ wallet ])
+  const [ wontonPower, setWontonPower ] = useState(0);
+  const [ ready, setReady ] = useState(false);
+  const [ universes, setUniverses ] = useState(globalUniversesHolder.universesHolder[0]);
+
+  useEffect(() => {
+    if (walletAddress) {
+        nftStore.store(walletAddress.toString({ testOnly }));
+        setReady(true);
+    } else {
+        setReady(false);
+    }
+  }, [walletAddress]);
+
+  useEffect(() => {
+    setUniverses(globalUniversesHolder.universesHolder[wontonPower]);
+  }, [ wontonPower ]);
+
+  const onClick: MenuProps['onClick'] = useCallback(({ key }: { key: string }) => {
+      setWontonPower(+key);
+      console.log(`Setting new universe. wontonPower: ${key}, address: ${globalUniversesHolder.universesHolder[+key].wonTon.toString()}`);
+  }, []);
+
+  const items: MenuProps["items"] = useMemo(() => {
+      return Object.values(globalUniversesHolder.universesHolder).map(universes => {
+          return {
+              key: universes.wonTonPower.toString(),
+              label: `Universe ${universes.wonTonPower}`,
+          }
+      });
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Flex vertical={true} gap="middle">
+      <Flex vertical={false} gap="middle" align={"center"}>
+          <Space>
+              <TonConnectButton/>
+              <Dropdown menu={{ items, selectable: true, defaultSelectedKeys: [ '0' ], onClick }} trigger={[ 'click' ]}>
+                  <a onClick={(e) => e.preventDefault()}>
+                      <Space>
+                          Universes
+                          <DownOutlined/>
+                      </Space>
+                  </a>
+              </Dropdown>
+          </Space>
+      </Flex>
+
+      <Flex vertical={false} gap="middle">
+          {ready && walletAddress ? (
+              <Flex vertical={true} gap="middle">
+                Connected...
+              </Flex>
+          ) : null}
+      </Flex>
+    </Flex>
   )
 }
 
