@@ -8,7 +8,7 @@ import { tonAddress } from './lib/TonUtils';
 import { useNftsStore } from './store/NftsStore';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-window.Buffer = window.Buffer || require("buffer").Buffer;
+// window.Buffer = window.Buffer || require("buffer").Buffer;
 
 export const testOnly = import.meta.env.VITE_TEST_ONLY === 'true' || true;
 
