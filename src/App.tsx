@@ -1,7 +1,7 @@
 import './App.css'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Dropdown, Flex, MenuProps, Space } from "antd";
-import { DownOutlined, ReloadOutlined } from "@ant-design/icons";
+import { DownOutlined } from "@ant-design/icons";
 import { globalUniversesHolder } from './store/GlobalUniversesHolder';
 import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
 import { tonAddress } from './lib/TonUtils';
@@ -18,7 +18,7 @@ function App() {
   const walletAddress = useMemo(() => tonAddress(wallet?.account.address), [ wallet ])
   const [ wontonPower, setWontonPower ] = useState(0);
   const [ ready, setReady ] = useState(false);
-  const [ universes, setUniverses ] = useState(globalUniversesHolder.universesHolder[0]);
+  const [ _, setUniverses ] = useState(globalUniversesHolder.universesHolder[0]);
 
   useEffect(() => {
     if (walletAddress) {

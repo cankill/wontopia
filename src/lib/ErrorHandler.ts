@@ -1,4 +1,3 @@
-
 type ErrorWithMessage = {
     message: string
 }
@@ -29,16 +28,15 @@ export const getErrorMessage = (error: unknown) => {
 }
 
 export function printJson<T>(obj: T) {
-    return JSON.stringify(obj, (key, value) =>
+    return JSON.stringify(obj, (_, value) =>
         typeof value === 'bigint'
         ? value.toString()
         : value // return everything else unchanged
     );
 }
 
-
 // eslint-disable-next-line @typescript-eslint/no-redeclare
-interface BigInt {
+export interface BigInt {
     /** Convert to BigInt to string form in JSON.stringify */
     toJSON: () => string;
 }
