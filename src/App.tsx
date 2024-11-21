@@ -48,8 +48,13 @@ function App() {
   }, []);
 
   return (
-    <Flex vertical={true} gap="middle">
-      <Flex vertical={false} gap="middle" align={"center"}>
+    <Flex gap='middle' align='start' vertical className='zhopa'>
+      <Flex vertical={false} gap='middle' justify='space-between' className='caption'>
+        <div className='main-title'>WONTOPIA</div>
+        <div className='version'>v0.1.0</div>
+      </Flex>
+      <div className='disclaimer'>Welcome to <span className='wontopia'>Wontopia</span>! The place where we have a big utopic dream to find the luckiest man in the Universe.</div>
+      <Flex vertical={false} gap="middle" align='flex-start' className='zhopa2'>
           <Space>
               <TonConnectButton/>
               <Dropdown menu={{ items, selectable: true, defaultSelectedKeys: [ '0' ], onClick }} trigger={[ 'click' ]}>
