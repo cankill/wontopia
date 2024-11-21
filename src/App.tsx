@@ -53,7 +53,9 @@ function App() {
         <div className='main-title'>WONTOPIA</div>
         <div className='version'>v0.1.0</div>
       </Flex>
-      <div className='disclaimer'>Welcome to <span className='wontopia'>Wontopia</span>! The place where we have a big utopic dream to find the luckiest man in the Universe.</div>
+      <div className='disclaimer'>
+        Welcome to <span className='wontopia'>Wontopia</span>! The place where we have a big utopic dream to find the luckiest man in the Universe.
+      </div>
       <Flex vertical={false} gap="middle" align='flex-start' className='zhopa2'>
           <Space>
               <TonConnectButton/>
