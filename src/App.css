@@ -1,17 +1,19 @@
 .zhopa {
   background-color: rebeccapurple;
-  width: fit-content;
+  width: auto;
+  display: block;
 }
 
 .zhopa2 {
-  /* background-color: red; */
-  width: 100%;
+  background-color: silver;
+  /* width: 100%; */
 }
 
 .caption {
   background-color: green;
   align-items: baseline;
-  width: 100%;
+  width: auto;
+  display: block;
 }
 
 .main-title {
