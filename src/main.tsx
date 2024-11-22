@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
+import './fonts.css'
 import './index.css'
 import { TonConnectUIProvider } from '@tonconnect/ui-react'
 import WebApp from '@twa-dev/sdk'
