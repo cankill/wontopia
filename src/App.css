@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'Fan';
-  src: local('Fan'), url(./fonts/BebasNeue-Regular.ttf);
+  font-family: 'BebasNeue';
+  src: url(./fonts/BebasNeue-Regular.ttf);
 }
 
 .zhopa {
-  /* background-color: rebeccapurple; */
+  background-color: rebeccapurple;
   /* display: block; */
 }
 
 .zhopa2 {
-  /* background-color: silver; */
+  background-color: silver;
   /* width: 100%; */
 }
 
 .caption {
-  /* background-color: green; */
+  background-color: green;
   align-items: baseline;
   width: 100%;
 }
 
 .main-title {
-  font-family: Fan, Arial, serif;
+  font-family: BebasNeue, Arial, serif;
   color: red;
   font-size: 6.7rem;
   font-size: 6.7rem;
