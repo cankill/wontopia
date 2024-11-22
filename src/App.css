@@ -30,7 +30,9 @@
 }
 
 .disclaimer {
+  font-family: 'JosefinSans', Arial, serif;
   flex-wrap: wrap;
+  font-size: 1.2rem;
   /* background-color: red; */
   /* width: 40%; */
 }

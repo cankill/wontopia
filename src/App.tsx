@@ -54,8 +54,12 @@ function App() {
         <div className='version'>v0.1.0</div>
       </Flex>
       <p className='disclaimer'>
-        Welcome to <span className='wontopia'>Wontopia</span>! The place where we have a big utopic dream to
-        find the luckiest man in the Universe.
+        Welcome to <span className='wontopia'>Wontopia</span>.<br/>
+        It's the place where we have a big utopic dream.<br/>
+        The Dream to find the luckiest man in the Universe!
+      </p> 
+      <p className='disclaimer'>
+        Will you dare to challenge the Universe and rise on the top of <span className='wontopia'>Wontopia</span>?
       </p>
       <Flex vertical={false} gap="middle" align='flex-start' className='zhopa2'>
           <Space>
