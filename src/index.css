@@ -1,14 +1,9 @@
 body {
   margin: 1rem;
-  display: flex;
-  /* place-items: center;
-  place-items: flex-start start; */
-  align-content: center;
+  align-content: flex-start;
   justify-content: center;
-
   color: rgba(255, 255, 255, 0.87);
-  background: rgb(16,16,16);
-  background: linear-gradient(180deg, rgba(16,16,16,1) 0%, rgba(48,48,48,1) 66%, rgba(64,64,64,1) 100%);
-  width: 100vw;
+  background: rgb(60, 60, 60);
+  background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(94,94,94,1) 100%);
   min-height: 100vh;
 }

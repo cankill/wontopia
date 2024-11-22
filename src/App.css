@@ -1,21 +1,28 @@
+@font-face {
+  font-family: 'Fan';
+  src: local('Fan'), url(./fonts/BebasNeue-Regular.ttf);
+}
+
 .zhopa {
-  background-color: rebeccapurple;
-  display: block;
+  /* background-color: rebeccapurple; */
+  /* display: block; */
 }
 
 .zhopa2 {
-  background-color: silver;
+  /* background-color: silver; */
   /* width: 100%; */
 }
 
 .caption {
-  background-color: green;
+  /* background-color: green; */
   align-items: baseline;
+  width: 100%;
 }
 
 .main-title {
+  font-family: Fan, Arial, serif;
   color: red;
-  font-size: xx-large;
+  font-size: 6.7rem;
   font-weight: 700;
   /* -webkit-text-stroke: 0.02em yellow; */
 }
@@ -29,7 +36,7 @@
 
 .disclaimer {
   flex-wrap: wrap;
-  background-color: red;
+  /* background-color: red; */
   /* width: 40%; */
 }
 
