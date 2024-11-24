@@ -48,7 +48,7 @@ export const App = () => {
       });
   }, []);
 
-  return !(ready && walletAddress) ? Disclaimer() : (
+  return !(ready && walletAddress) ? <Disclaimer/> : (
     <Flex gap='smll' align='start' vertical>
       <Flex vertical={false} gap='middle' justify='space-between' className='caption'>
           <div className='letsdoit'>Connected to the wallet</div>

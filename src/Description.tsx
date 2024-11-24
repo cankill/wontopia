@@ -39,7 +39,7 @@ export const Description = ({isOpen, onClose}: {isOpen: boolean, onClose: () => 
       <p className='fees'><em>
         Approximately 0.6 <TON/> coins from each initial stake will remain in the game. Part of this amount will be spent on network fees to run the smart contracts, and the remainder will support development and infrastructure.
       </em></p>
-      <Card>
+      <Card className='lore'>
         The name <span className='disclaimer-accent-b'>Wontopia</span> is a combination of two words: <span className='disclaimer-accent-b'>Wonton</span> and <span className='disclaimer-accent-b'>Utopia</span>.
         &nbsp;The word <span className='disclaimer-accent-b'>Wonton</span> was chosen because it sounds similar to the phrases:
         <ul>
@@ -53,4 +53,4 @@ export const Description = ({isOpen, onClose}: {isOpen: boolean, onClose: () => 
       </Card>
     </Drawer>
   );
-};
+}

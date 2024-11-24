@@ -40,14 +40,13 @@
   color: rgb(60, 60, 60);
   font-family: 'BebasNeue', Arial, serif;
   /* font-size: 5.8rem; */
-  font-size: 4vw;
+  /* font-size: 4vw; */
   font-weight: 900;
 }
 
 .disclaimer-accent-g {
   color: rgb(4, 223, 0);
   /* font-size: 5.8rem; */
-  font-size: 4vw;
   font-weight: 900;
 }
 
@@ -64,7 +63,12 @@
   font-weight: 100;
 }
 
-
+.lore {
+  /* color: #a6a6a6; */
+  /* font-family: 'TonFont'; */
+  font-size: 3vw;
+  font-weight: 100;
+}
 
 .wontopia {
   color: red;
@@ -76,9 +80,4 @@
   font-size: 6vw;
   color: red;
   font-weight: 600;
-}
-
-
-.my-modal {
-  background-color: green;
 }

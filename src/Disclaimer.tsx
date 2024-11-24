@@ -1,5 +1,5 @@
 import { TonConnectButton } from "@tonconnect/ui-react";
-import { Flex } from "antd";
+import { Button, Flex } from "antd";
 import { useCallback, useState } from "react";
 import { Description } from "./Description";
 
@@ -21,7 +21,7 @@ export const Disclaimer = () => {
       </Flex>
       <p className='disclaimer'>
         Welcome to <span className='disclaimer-accent'>Wontopia</span>.<br/>
-        It's the place where we have a big utopic dream.<br/>
+        It's the place where we have a big utopian dream.<br/>
         The Dream to find the luckiest man in the Universe!
       </p> 
       <p className='disclaimer'>
@@ -38,7 +38,7 @@ export const Disclaimer = () => {
           <li>All the losers will receive unique memorable <span className='disclaimer-accent'>NFT</span> Items</li>
         </ul>
       </div>
-      <a onClick={onOpen}>I want to know more!</a>
+      <Button onClick={onOpen} className="links" size="small" block>I want to know more!</Button>
       <Description isOpen={open}  onClose={onClose}/>
       <p className='disclaimer'>To enter the Game, simply press the button and connect your wallet.
         Not sure what a wallet is or how secure it is?
