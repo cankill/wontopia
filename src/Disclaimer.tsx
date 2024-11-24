@@ -14,7 +14,7 @@ export const Disclaimer = () => {
   }, [setOpen]);
 
   return (
-    <Flex gap='smll' align='start' vertical>
+    <Flex gap='small' align='start' vertical>
       <Flex vertical={false} gap='middle' justify='space-between' className='caption'>
         <div className='main-title'>WONTOPIA</div>
         <div className='version'>v0.1.0</div>

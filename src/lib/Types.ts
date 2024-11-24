@@ -1,4 +1,4 @@
-import { Address } from '@ton/core';
+import { Address, ContractProvider, Sender } from '@ton/core';
 import { z } from 'zod';
 
 export const WIN = "WIN";
@@ -87,6 +87,20 @@ export const FEUniversesHolderSchema = z.object({
   collections: ContractSetSchema,
 });
 
+export const SendDeployFunctionSchema =
+                 z.function()
+                  .args(
+                      z.custom<ContractProvider>(),
+                      z.custom<Sender>(),
+                      z.bigint())
+                  .returns(z.custom<Promise<void>>());
+
+export const DeployableSchema = z.object({
+  address: z.custom<Address>().readonly(),
+  sendDeploy: SendDeployFunctionSchema,
+});
+
+
 export const TonClientParametersSchema = z.object({
   endpoint: z.string(),
   timeout: z.number().optional(),
@@ -162,6 +176,7 @@ export type FeGetNftData = z.infer<typeof FeGetNftDataSchema>;
 export type NonNft = z.infer<typeof NonNftSchema>;
 export type NftMeta = z.infer<typeof NftMetaSchema>;
 export type TonClientParametersOpt = z.infer<typeof TonClientParametersOptSchema>;
+export type Deployable = z.infer<typeof DeployableSchema>;
 
 export const NOT_NFT: NonNft = { type: 'NON_NFT' };
 

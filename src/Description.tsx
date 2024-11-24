@@ -1,8 +1,5 @@
 import { Card, Drawer } from 'antd';
-
-const TON = () => {
-  return (<span className='ton'>TON</span>)
-}
+import { TON } from './Ton';
 
 export const Description = ({isOpen, onClose}: {isOpen: boolean, onClose: () => void}) => {
   return (
