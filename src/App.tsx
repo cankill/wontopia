@@ -1,6 +1,6 @@
 import './App.css'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Dropdown, Flex, MenuProps, Space } from "antd";
+import { Button, Dropdown, Flex, MenuProps, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { globalUniversesHolder } from './store/GlobalUniversesHolder';
 import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';

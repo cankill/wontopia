@@ -36,6 +36,29 @@
   font-weight: 900;
 }
 
+.disclaimer-accent-b {
+  color: rgb(60, 60, 60);
+  font-family: 'BebasNeue', Arial, serif;
+  /* font-size: 5.8rem; */
+  font-size: 4vw;
+  font-weight: 900;
+}
+
+.disclaimer-accent-g {
+  color: rgb(4, 223, 0);
+  /* font-size: 5.8rem; */
+  font-size: 4vw;
+  font-weight: 900;
+}
+
+.ton {
+  color: #0098EA;
+  font-family: 'TonFont';
+  font-size: 4vw;
+}
+
+
+
 .wontopia {
   color: red;
   font-weight: 600;
@@ -46,4 +69,9 @@
   font-size: 6vw;
   color: red;
   font-weight: 600;
+}
+
+
+.my-modal {
+  background-color: green;
 }
