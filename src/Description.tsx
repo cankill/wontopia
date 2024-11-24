@@ -7,7 +7,7 @@ const TON = () => {
 export const Description = ({isOpen, onClose}: {isOpen: boolean, onClose: () => void}) => {
   return (
     <Drawer
-      title="Wontopia description"
+      title=<><span className='disclaimer-accent-b'>Wontopia</span> Description</>
       placement='bottom'
       size='large'
       // closable={false}
@@ -19,7 +19,7 @@ export const Description = ({isOpen, onClose}: {isOpen: boolean, onClose: () => 
         <span className='disclaimer-accent-b'>Wontopia</span> is a unique "Distributed Game of Chance".
       </p>
       <p>
-        The Game logic is open for examination. It's a smart-contract in the distributed Blockchain <TON/>. The main idea is to expose the descicion making logic, so anybody can check and trust it!
+        The game’s logic is transparent and open for examination. Powered by a smart contract on the decentralized <TON/> blockchain, it exposes its decision-making processes so anyone can verify and trust it.
       </p>
       <p>
         To start a game, the player needs only one <TON/> coin.
@@ -36,6 +36,9 @@ export const Description = ({isOpen, onClose}: {isOpen: boolean, onClose: () => 
       <p>
         Players can continue playing by using their winning NFT items, gaining a chance to triple their prize value. Each NFT item can be played once, but using it destroys the item. Rounds with playable NFTs work the same way: three players use their NFTs, and only one emerges as the winner.
       </p>
+      <p className='fees'><em>
+        Approximately 0.6 <TON/> coins from each initial stake will remain in the game. Part of this amount will be spent on network fees to run the smart contracts, and the remainder will support development and infrastructure.
+      </em></p>
       <Card>
         The name <span className='disclaimer-accent-b'>Wontopia</span> is a combination of two words: <span className='disclaimer-accent-b'>Wonton</span> and <span className='disclaimer-accent-b'>Utopia</span>.
         &nbsp;The word <span className='disclaimer-accent-b'>Wonton</span> was chosen because it sounds similar to the phrases:

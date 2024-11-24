@@ -54,7 +54,14 @@
 .ton {
   color: #0098EA;
   font-family: 'TonFont';
-  font-size: 4vw;
+  /* font-size: 4vw; */
+}
+
+.fees {
+  /* color: #a6a6a6; */
+  /* font-family: 'TonFont'; */
+  font-size: 3vw;
+  font-weight: 100;
 }
 
 
