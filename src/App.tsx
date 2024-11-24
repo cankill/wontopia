@@ -54,21 +54,25 @@ function App() {
         <div className='version'>v0.1.0</div>
       </Flex>
       <p className='disclaimer'>
-        Welcome to <span className='wontopia'>Wontopia</span>.<br/>
+        Welcome to <span className='disclaimer-accent'>Wontopia</span>.<br/>
         It's the place where we have a big utopic dream.<br/>
         The Dream to find the luckiest man in the Universe!
       </p> 
       <p className='disclaimer'>
-        Will you dare to challenge the Universe and rise on the top of <span className='wontopia'>Wontopia</span>?
+        Will you dare to challenge the Universe and rise to the top of <span className='disclaimer-accent'>Wontopia</span>?
       </p>
       <p className='disclaimer'>
-        The rools are simple. Each level you are against two other challengers.
-        One is a winner and receives it all. The winner receives an unique NFT item, with the price of the prize.
-        The winner is able to withdraw and take his prize, or move forward on the next level to challenge the other too lucky persons.
-        The win on each level will upgrade your NFT item to the more valuable one.
-        All the loosers will receive an unique memorable NFT Items.
+        The rules are simple.
+        <ul>
+          <li>At each level, <span className='disclaimer-accent'>you</span> are against two other challengers</li>
+          <li>One is a <span className='disclaimer-accent'>winner</span> and receives it all. The <span className='disclaimer-accent'>winner</span> gets a unique <span className='disclaimer-accent'>NFT</span> item, with the price of the <span className='disclaimer-accent'>prize</span></li>
+          <li>The <span className='disclaimer-accent'>winner</span> can withdraw and take his <span className='disclaimer-accent'>prize</span>, or move forward to the next <span className='disclaimer-accent'>level</span> to challenge the other two lucky persons</li>
+          <li>The <span className='disclaimer-accent'>win</span> on each <span className='disclaimer-accent'>level</span> will upgrade your <span className='disclaimer-accent'>NFT</span> item to the more valuable one</li>
+          <li>Play to the end! <span className='disclaimer-accent'>Win</span> it all!</li>
+          <li>All the <span className='disclaimer-accent'>losers</span> will receive unique memorable <span className='disclaimer-accent'>NFT</span> Items</li>
+        </ul>
       </p>
-      <p className='disclaimer'>All you is to press the button and connect the Wallet. Don't know what the wallet is? Just press the button and choose the help button to know more about wallets and it's kinds.</p>
+      <p className='disclaimer'>All you need to do to enter the game is press the button and connect to the Wallet. Don't know what the wallet is? Just press the button and choose the help button to learn more about wallets and their kinds.</p>
       <Flex vertical={false} gap="middle" align='flex-start' className='zhopa2'>
           <Space>
               <TonConnectButton/>
