@@ -16,8 +16,9 @@
 
 .main-title {
   font-family: 'BebasNeue', Arial, serif;
-  color: red;
-  font-size: 6rem;
+  color: rgb(230, 0, 0);
+  /* font-size: 5.8rem; */
+  font-size: 25vw;
   font-weight: 700;
   /* -webkit-text-stroke: 0.02em yellow; */
 }

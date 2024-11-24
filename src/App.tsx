@@ -1,6 +1,6 @@
 import './App.css'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Dropdown, Flex, MenuProps, Space } from "antd";
+import { Button, Dropdown, Flex, MenuProps, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { globalUniversesHolder } from './store/GlobalUniversesHolder';
 import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
@@ -48,7 +48,7 @@ function App() {
   }, []);
 
   return (
-    <Flex gap='small' align='start' vertical className='zhopa'>
+    <Flex gap='smll' align='start' vertical className='zhopa'>
       <Flex vertical={false} gap='middle' justify='space-between' className='caption'>
         <div className='main-title'>WONTOPIA</div>
         <div className='version'>v0.1.0</div>
@@ -61,9 +61,22 @@ function App() {
       <p className='disclaimer'>
         Will you dare to challenge the Universe and rise on the top of <span className='wontopia'>Wontopia</span>?
       </p>
+      <p className='disclaimer'>
+        The rools are simple. Each level you are against two other challengers.
+        One is a winner and receives it all. The winner receives an unique NFT item, with the price of the prize.
+        The winner is able to withdraw and take his prize, or move forward on the next level to challenge the other too lucky persons.
+        The win on each level will upgrade your NFT item to the more valuable one.
+        All the loosers will receive an unique memorable NFT Items.
+      </p>
+      <p className='disclaimer'>All you is to press the button and connect the Wallet. Don't know what the wallet is? Just press the button and choose the help button to know more about wallets and it's kinds.</p>
       <Flex vertical={false} gap="middle" align='flex-start' className='zhopa2'>
           <Space>
               <TonConnectButton/>
+          </Space>
+      </Flex>
+
+      <Flex vertical={false} gap="middle" align='flex-start' className='zhopa2'>
+          <Space>
               <Dropdown menu={{ items, selectable: true, defaultSelectedKeys: [ '0' ], onClick }} trigger={[ 'click' ]}>
                   <a onClick={(e) => e.preventDefault()}>
                       <Space>
