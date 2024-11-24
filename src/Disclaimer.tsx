@@ -1,5 +1,5 @@
 import { TonConnectButton } from "@tonconnect/ui-react";
-import { Button, Flex } from "antd";
+import { Flex } from "antd";
 import { useCallback, useState } from "react";
 import { Description } from "./Description";
 
