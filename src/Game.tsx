@@ -3,7 +3,6 @@ import { TonConnectButton } from "@tonconnect/ui-react";
 import { Dropdown, Flex, MenuProps, Space } from "antd";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { globalUniversesHolder } from "./store/GlobalUniversesHolder";
-import { TON } from "./Ton";
 import { PlayButton } from "./PlayButton";
 import { useWonTonContract } from "./hooks/useWonTonContract";
 
@@ -43,10 +42,15 @@ const items: MenuProps["items"] = useMemo(() => {
           <TonConnectButton/>
       </Flex>
 
-      <p className="game-disclaimer">
-        We are ready to play.
-      </p>
-      <PlayButton sendBet={contract.sendBet} />
+      {wontonPower ===0 ? (
+        <>
+          <p className="game-disclaimer">
+            We are ready to play.
+          </p>
+          <PlayButton sendBet={contract.sendBet} />
+        </> )
+        : null
+      }
 
       <Flex vertical={false} gap="middle" align='flex-start' className='zhopa2'>
           <Space>
