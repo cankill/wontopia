@@ -71,14 +71,14 @@
 }
 
 .wontopia {
-  color: red;
+  color: rgb(230, 0, 0);
   font-weight: 600;
 }
 
 .letsdoit {
   font-family: 'BebasNeue', Arial, serif;
-  font-size: 6vw;
-  color: red;
+  font-size: 5vw;
+  color: rgb(230, 0, 0);
   font-weight: 600;
 }
 
@@ -88,5 +88,5 @@
 }
 
 .game-disclaimer {
-  
+
 }
